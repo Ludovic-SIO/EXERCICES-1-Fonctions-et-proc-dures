@@ -9,21 +9,28 @@ namespace EXERCICES_1_Fonctions_et_procédures
     internal class Program
     {
 
-        static int absolue(int a)
+        static int difference(int a, int b)
         {
-            if (a >= 0) return a;
-            else return -a;
+            int somme=a+b;
+            int produit = a * b;
+            return produit - somme;
+            
         }
         static void Main(string[] args)
         {
            
-                int a;
-
-                Console.WriteLine("Saisie le valeur entière d'un nombre");
+            int a;
+            int b;
+            
+                Console.WriteLine("Saisie un entier");
                 a = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("la valeur est {0}", a);   
-                
-                Console.WriteLine("La valeur absolu est: {0}",absolue (a));
+                Console.WriteLine("la valeur est {0}", a);
+                Console.WriteLine("Saisie un autre entier");
+                b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("la valeur est {0}", b);
+
+
+                Console.WriteLine("La différence entre le produit et la somme est: {0}",difference (a,b));
                 Console.ReadKey();
 
         }
